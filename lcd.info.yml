@@ -39,7 +39,6 @@ dependencies:
   - tour
   - automated_cron
   - datetime_range
-  - block_visibility_groups
   - lcd_events
   - lcd_organisation
 themes:
