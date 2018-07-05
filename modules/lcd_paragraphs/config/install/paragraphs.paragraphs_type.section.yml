@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: section
+label: Section
+description: 'A wrapper around other paragraph types to define styling of the section, f.e. background-color.'
+behavior_plugins: {  }

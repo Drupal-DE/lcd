@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: generic_view
+label: 'Generic view'
+description: ''
+behavior_plugins: {  }

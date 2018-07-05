@@ -1,0 +1,6 @@
+langcode: en
+status: true
+dependencies: {  }
+id: dark
+label: Dark
+classes: section--style-dark

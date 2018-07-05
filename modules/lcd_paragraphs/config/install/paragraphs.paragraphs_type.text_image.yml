@@ -1,0 +1,7 @@
+langcode: nl
+status: true
+dependencies: {  }
+id: text_image
+label: 'Text with image'
+description: ''
+behavior_plugins: {  }

@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: text_two_columns
+label: 'Text two columns'
+description: ''
+behavior_plugins: {  }

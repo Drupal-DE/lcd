@@ -41,6 +41,7 @@ dependencies:
   - datetime_range
   - lcd_events
   - lcd_organisation
+  - lcd_paragraphs
 themes:
   - bartik
   - seven

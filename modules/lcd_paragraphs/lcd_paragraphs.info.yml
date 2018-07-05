@@ -1,0 +1,11 @@
+name: LCD paragraphs
+description: 'Provide Paragraph types and related configuration.'
+type: module
+core: 8.x
+dependencies:
+  - views
+  - form
+  - paragraphs
+  - viewfield
+  - classy_paragraphs
+package: lcd

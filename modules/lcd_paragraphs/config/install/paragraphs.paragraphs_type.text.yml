@@ -1,0 +1,7 @@
+langcode: nl
+status: true
+dependencies: {  }
+id: text
+label: Text
+description: ''
+behavior_plugins: {  }

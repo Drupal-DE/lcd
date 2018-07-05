@@ -1,0 +1,57 @@
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_image_paragraphs
+    - paragraphs.paragraphs_type.image
+    - paragraphs.paragraphs_type.images
+  module:
+    - entity_reference_revisions
+id: paragraph.images.field_image_paragraphs
+field_name: field_image_paragraphs
+entity_type: paragraph
+bundle: images
+label: Images
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      image: image
+    target_bundles_drag_drop:
+      image:
+        enabled: true
+        weight: 4
+      images:
+        weight: 5
+        enabled: false
+      text:
+        weight: 6
+        enabled: false
+      events:
+        weight: 11
+        enabled: false
+      intro:
+        weight: 14
+        enabled: false
+      news:
+        weight: 15
+        enabled: false
+      partners:
+        weight: 16
+        enabled: false
+      section:
+        weight: 17
+        enabled: false
+      text_image:
+        weight: 19
+        enabled: false
+      text_images:
+        weight: 20
+        enabled: false
+field_type: entity_reference_revisions

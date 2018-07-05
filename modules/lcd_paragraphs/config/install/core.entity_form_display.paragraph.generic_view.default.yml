@@ -1,0 +1,42 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.generic_view.field_link
+    - field.field.paragraph.generic_view.field_title
+    - field.field.paragraph.generic_view.field_view
+    - paragraphs.paragraphs_type.generic_view
+  module:
+    - link
+    - viewfield
+id: paragraph.generic_view.default
+targetEntityType: paragraph
+bundle: generic_view
+mode: default
+content:
+  field_link:
+    weight: 1
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_view:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: viewfield_select
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

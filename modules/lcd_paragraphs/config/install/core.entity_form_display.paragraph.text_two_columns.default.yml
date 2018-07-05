@@ -1,0 +1,34 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.text_two_columns.field_body_left
+    - field.field.paragraph.text_two_columns.field_body_right
+    - paragraphs.paragraphs_type.text_two_columns
+  module:
+    - text
+id: paragraph.text_two_columns.default
+targetEntityType: paragraph
+bundle: text_two_columns
+mode: default
+content:
+  field_body_left:
+    weight: 0
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_body_right:
+    weight: 1
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true
