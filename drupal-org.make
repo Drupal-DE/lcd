@@ -57,3 +57,7 @@ projects[geolocation][version] = 1.11
 
 projects[address][type] = module
 projects[address][version] = 1.4
+
+projects[viewfield][type] = module
+projects[viewfield][version] = 3.0-alpha2
+
