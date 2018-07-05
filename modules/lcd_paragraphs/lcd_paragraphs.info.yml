@@ -4,7 +4,7 @@ type: module
 core: 8.x
 dependencies:
   - views
-  - form
+  - contact
   - paragraphs
   - viewfield
   - classy_paragraphs
