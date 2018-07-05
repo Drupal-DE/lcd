@@ -34,6 +34,9 @@ projects[metatag][version] = 1.5
 projects[paragraphs][type] = module
 projects[paragraphs][version] = 1.3
 
+projects[classy_paragraphs][type] = module
+projects[classy_paragraphs][version] = 1.0-beta1
+
 projects[pathauto][type] = module
 projects[pathauto][version] = 1.2
 
