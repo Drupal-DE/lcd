@@ -1,0 +1,24 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - crop.type.header_mobile
+  module:
+    - crop
+name: header_mobile
+label: 'Header mobile (768w)'
+effects:
+  8785fe75-7689-4002-808f-d6f4cec6b287:
+    uuid: 8785fe75-7689-4002-808f-d6f4cec6b287
+    id: crop_crop
+    weight: 2
+    data:
+      crop_type: header_mobile
+  913a5ec3-b58c-4462-8dfc-f104c439f1f9:
+    uuid: 913a5ec3-b58c-4462-8dfc-f104c439f1f9
+    id: image_scale
+    weight: 2
+    data:
+      width: 768
+      height: null
+      upscale: true

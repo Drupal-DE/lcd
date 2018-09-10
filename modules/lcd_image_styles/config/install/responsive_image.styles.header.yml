@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.header_desktop
+    - image.style.header_mobile
+id: header
+label: Header
+fallback_image_style: header_desktop

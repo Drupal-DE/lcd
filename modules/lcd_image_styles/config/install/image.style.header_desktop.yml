@@ -1,0 +1,24 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - crop.type.header_desktop
+  module:
+    - crop
+name: header_desktop
+label: 'Header desktop (1920w)'
+effects:
+  cd0957d8-8806-407d-8876-c63c69788af4:
+    uuid: cd0957d8-8806-407d-8876-c63c69788af4
+    id: crop_crop
+    weight: 1
+    data:
+      crop_type: header_desktop
+  7bd050ad-bac8-4a58-b238-185150d7201c:
+    uuid: 7bd050ad-bac8-4a58-b238-185150d7201c
+    id: image_scale
+    weight: 2
+    data:
+      width: 1920
+      height: null
+      upscale: false

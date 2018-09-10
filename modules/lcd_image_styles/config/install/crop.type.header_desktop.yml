@@ -1,0 +1,11 @@
+langcode: en
+status: true
+dependencies: {  }
+label: 'Header desktop'
+id: header_desktop
+description: ''
+aspect_ratio: ''
+soft_limit_width: 1920
+soft_limit_height: null
+hard_limit_width: null
+hard_limit_height: null

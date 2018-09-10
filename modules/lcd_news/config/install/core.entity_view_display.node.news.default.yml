@@ -1,0 +1,45 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.news.body
+    - field.field.node.news.field_news_image
+    - node.type.news
+    - responsive_image.styles.header
+  module:
+    - field_layout
+    - layout_discovery
+    - responsive_image
+    - text
+    - user
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
+id: node.news.default
+targetEntityType: node
+bundle: news
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_news_image:
+    weight: 0
+    label: hidden
+    settings:
+      responsive_image_style: header
+      image_link: ''
+    third_party_settings: {  }
+    type: responsive_image
+    region: content
+  links:
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

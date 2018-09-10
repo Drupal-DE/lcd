@@ -22,6 +22,9 @@ projects[config_split][version] = 1.3
 projects[config_update][type] = module
 projects[config_update][version] = 1.5
 
+projects[crop][type] = module
+projects[crop][version] = 2.0-rc1
+
 projects[default_content][type] = module
 projects[default_content][version] = 1.0-alpha7
 
@@ -48,6 +51,9 @@ projects[geolocation][version] = 1.11
 
 projects[honeypot][type] = module
 projects[honeypot][version] = 1.27
+
+projects[image_widget_crop][type] = module
+projects[image_widget_crop][version] = 2.2
 
 projects[leaflet][type] = module
 projects[leaflet][version] = 1.0-beta

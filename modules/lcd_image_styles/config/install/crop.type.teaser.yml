@@ -1,0 +1,11 @@
+langcode: en
+status: true
+dependencies: {  }
+label: Teaser
+id: teaser
+description: ''
+aspect_ratio: '7:4'
+soft_limit_width: 406
+soft_limit_height: 232
+hard_limit_width: null
+hard_limit_height: null

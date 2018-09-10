@@ -1,0 +1,23 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - crop.type.teaser
+  module:
+    - crop
+name: node_teaser
+label: Teaser
+effects:
+  2432368f-368f-442e-96ea-b037959c0dba:
+    uuid: 2432368f-368f-442e-96ea-b037959c0dba
+    id: crop_crop
+    weight: 1
+    data:
+      crop_type: teaser
+  90eb405b-fb81-46f5-9def-7c6916de6e97:
+    uuid: 90eb405b-fb81-46f5-9def-7c6916de6e97
+    id: image_scale_and_crop
+    weight: 2
+    data:
+      width: 406
+      height: 232

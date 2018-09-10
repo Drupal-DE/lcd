@@ -15,6 +15,7 @@ dependencies:
   - comment
   - contextual
   - contact
+  - crop
   - menu_link_content
   - datetime
   - block_content
@@ -22,6 +23,7 @@ dependencies:
   - editor
   - help
   - image
+  - image_widget_crop
   - menu_ui
   - options
   - path
@@ -46,6 +48,8 @@ dependencies:
   - lcd_case_study
   - lcd_client
   - lcd_event
+  - lcd_image_styles
+  - lcd_news
   - lcd_organisation
   - lcd_user_group
 themes:

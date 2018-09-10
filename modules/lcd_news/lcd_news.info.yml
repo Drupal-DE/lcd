@@ -1,0 +1,19 @@
+name: 'LCD News'
+type: module
+core: 8.x
+dependencies:
+  - field
+  - field_layout
+  - file
+  - image
+  - image_widget_crop
+  - layout_discovery
+  - lcd_image_styles
+  - menu_ui
+  - node
+  - path
+  - responsive_image
+  - text
+  - user
+  - views
+version: 8.x
