@@ -1,0 +1,8 @@
+id: lcd_event_drupical
+label: LCD Event Drupical
+description: Related imports for LCD event from Drupical.
+source_type: JSON from drupical
+dependencies:
+  enforced:
+    module:
+      - lcd_event

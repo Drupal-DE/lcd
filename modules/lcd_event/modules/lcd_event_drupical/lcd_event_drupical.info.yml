@@ -1,0 +1,10 @@
+name: LCD event Drupical
+description: 'Imports upcoming events from drupical.com'
+type: module
+core: 8.x
+dependencies:
+  - lcd_event
+  - migrate_plus
+  - migrate_process_extra
+  - migrate_tools
+package: lcd

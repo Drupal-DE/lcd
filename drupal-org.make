@@ -61,6 +61,9 @@ projects[metatag][version] = 1.5
 projects[migrate_plus][type] = module
 projects[migrate_plus][version] = 4.0-beta3
 
+projects[migrate_process_extra][type] = module
+projects[migrate_process_extra][version] = 1.x-dev
+
 projects[migrate_tools][type] = module
 projects[migrate_tools][version] = 4.0-rc1
 

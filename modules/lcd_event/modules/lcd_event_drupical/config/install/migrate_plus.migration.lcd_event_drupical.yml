@@ -1,0 +1,122 @@
+id: lcd_event_drupical
+label: Events from drupical
+migration_group: lcd_event_drupical
+migration_tags:
+  - event
+source:
+  plugin: url
+  data_fetcher_plugin: http
+  data_parser_plugin: json
+  urls:
+    - https://www.drupical.com/export
+  fields:
+    -
+      name: link
+      label: 'Link - unique identifier'
+      selector: link
+    -
+      name: title
+      label: 'Title'
+      selector: title
+    -
+      name: from
+      label: 'Date from'
+      selector: from
+    -
+      name: to
+      label: 'Date to'
+      selector: to
+    -
+      name: event_type
+      label: 'Event type'
+      selector: type
+    -
+      name: geo
+      label: 'Geolocation of the event'
+      selector: geo
+    -
+      name: venue
+      label: 'Event venue'
+      selector: venue
+    -
+      name: address
+      label: 'Event address'
+      selector: thoroughfare
+    -
+      name: city
+      label: 'Event city'
+      selector: city
+    -
+      name: state
+      label: 'Event state'
+      selector: state
+    -
+      name: postal_code
+      label: 'Event postal code'
+      selector: postal_code
+    -
+      name: country
+      label: 'Event country'
+      selector: "country"
+  ids:
+    link:
+      type: string
+destination:
+  plugin: entity:node
+process:
+  type:
+    plugin: default_value
+    default_value: event
+  title: title
+  field_event_credit:
+    plugin: default_value
+    default_value: 'https://www.drupical.com'
+  'field_event_date/value':
+    source: from
+    plugin: format_date
+    from_format: 'U'
+    to_format: 'Y-m-d\TH:i:s'
+    timezone: 'GMT'
+  'field_event_date/end_value':
+    source: to
+    plugin: format_date
+    from_format: 'U'
+    to_format: 'Y-m-d\TH:i:s'
+    timezone: 'GMT'
+  field_event_website: link
+  field_event_type:
+    plugin: entity_generate
+    source: event_type
+    value_key: name
+    bundle_key: vid
+    bundle: event_types
+    entity_type: taxonomy_term
+    ignore_case: true
+  field_event_venue: venue
+  'field_event_address/address_line1': address
+  'field_event_address/locality': city
+  'field_event_address/postal_code': postal_code
+  'field_event_address/administrative_area': state
+  'field_event_address/country_code':
+    plugin: country_code
+    source: country
+    locale: en
+  latitude:
+    plugin: extract
+    source: geo
+    index:
+      - lat
+  longitude:
+    plugin: extract
+    source: geo
+    index:
+      - lon
+  field_event_location:
+    plugin: geofield_latlon
+    source:
+      - '@latitude'
+      - '@longitude'
+dependencies:
+  enforced:
+    module:
+      - lcd_event

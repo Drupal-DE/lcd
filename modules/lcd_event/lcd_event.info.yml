@@ -1,19 +1,27 @@
-name: LCD event
+name: 'LCD event'
 description: 'Provide Event content type and related configuration.'
 type: module
 core: 8.x
 dependencies:
+  - address
   - block
-  - node
-  - taxonomy
-  - views
+  - datetime_range
+  - dynamic_entity_reference
+  - field
+  - field_layout
   - geofield
   - geofield_map
+  - layout_discovery
+  - lcd_organisation
+  - lcd_user_group
   - leaflet
   - leaflet_views
   - link
-  - datetime_range
-  - dynamic_entity_reference
-  - lcd_organisation
-  - lcd_user_group
+  - menu_ui
+  - node
+  - path
+  - taxonomy
+  - text
+  - user
+  - views
 package: lcd

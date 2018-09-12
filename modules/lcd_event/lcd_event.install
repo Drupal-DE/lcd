@@ -10,13 +10,15 @@ function lcd_event_install() {
   $default_event_types = [
     'DrupalCamp',
     'DrupalCon',
-    'Drupal Dev Days',
-    'Drupal Europe',
-    'Global Training Days',
+    'DrupalDevDays',
+    'DrupalEurope',
+    'GlobalTrainingDays',
     'Other',
+    'Regional',
+    'Sprint',
     'Summit',
     'Training',
-    'User Group Meeting',
+    'UserGroup',
   ];
   foreach ($default_event_types as $event_type) {
     \Drupal\taxonomy\Entity\Term::create([

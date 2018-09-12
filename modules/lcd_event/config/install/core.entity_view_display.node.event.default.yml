@@ -3,19 +3,29 @@ status: true
 dependencies:
   config:
     - field.field.node.event.body
+    - field.field.node.event.field_event_address
+    - field.field.node.event.field_event_credit
     - field.field.node.event.field_event_date
     - field.field.node.event.field_event_location
     - field.field.node.event.field_event_organizers
     - field.field.node.event.field_event_type
+    - field.field.node.event.field_event_venue
     - field.field.node.event.field_event_website
     - node.type.event
   module:
+    - address
     - datetime_range
     - dynamic_entity_reference
+    - field_layout
+    - layout_discovery
     - leaflet
     - link
     - text
     - user
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
 id: node.event.default
 targetEntityType: node
 bundle: event
@@ -24,12 +34,27 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 1
+    weight: 3
     settings: {  }
     third_party_settings: {  }
     region: content
+  field_event_address:
+    weight: 7
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    type: address_default
+    region: content
+  field_event_credit:
+    weight: 8
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
   field_event_date:
-    weight: 3
+    weight: 1
     label: inline
     settings:
       separator: '-'
@@ -66,6 +91,8 @@ content:
           x: ''
           'y': ''
       popup: 0
+      hide_empty_map: 0
+      popup_content: ''
     third_party_settings: {  }
     type: leaflet_formatter_default
     region: content
@@ -78,16 +105,24 @@ content:
     type: dynamic_entity_reference_label
     region: content
   field_event_type:
-    weight: 2
+    weight: 0
     label: inline
     settings:
       link: true
     third_party_settings: {  }
-    type: dynamic_entity_reference_label
+    type: entity_reference_label
+    region: content
+  field_event_venue:
+    weight: 2
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
     region: content
   field_event_website:
     weight: 4
-    label: inline
+    label: hidden
     settings:
       trim_length: 80
       url_only: false
@@ -97,9 +132,5 @@ content:
     third_party_settings: {  }
     type: link
     region: content
-  links:
-    weight: 0
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-hidden: {  }
+hidden:
+  links: true
