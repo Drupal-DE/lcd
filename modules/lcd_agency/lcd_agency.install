@@ -66,7 +66,7 @@ function lcd_agency_install() {
     \Drupal\taxonomy\Entity\Term::create([
       'name' => $size,
       'language' => 'en',
-      'vid' => 'number_of_employees',
+      'vid' => 'agency_number_of_employees',
     ])->save();
   }
 
