@@ -1,4 +1,4 @@
-name: LCD
+name: 'Local Community Distribution'
 type: profile
 description: 'Local Community Distribution'
 core: 8.x
@@ -40,14 +40,16 @@ dependencies:
   - views_ui
   - tour
   - automated_cron
-  - datetime_range
+  - layout_builder
   - file_entity
+  - lcd_agency
   - lcd_banner
   - lcd_case_study
   - lcd_client
   - lcd_event
-  - lcd_organisation
+  - lcd_testimonial
   - lcd_user_group
 themes:
-  - bartik
-  - seven
+  - drupal_business
+  - drupal_community
+
