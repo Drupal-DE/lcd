@@ -41,7 +41,6 @@ dependencies:
   - tour
   - automated_cron
   - layout_builder
-  - file_entity
   - lcd_agency
   - lcd_banner
   - lcd_case_study
@@ -50,6 +49,8 @@ dependencies:
   - lcd_testimonial
   - lcd_user_group
 themes:
+  - bartik
+  - seven
   - drupal_business
   - drupal_community
 
