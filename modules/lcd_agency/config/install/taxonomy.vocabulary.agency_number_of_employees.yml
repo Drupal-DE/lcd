@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+name: 'Number of employees'
+vid: agency_number_of_employees
+description: 'Number of employees for an agency'
+weight: 0

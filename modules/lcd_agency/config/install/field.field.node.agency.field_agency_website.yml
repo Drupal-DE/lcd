@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_agency_website
+    - node.type.agency
+  module:
+    - link
+id: node.agency.field_agency_website
+field_name: field_agency_website
+entity_type: node
+bundle: agency
+label: Website
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 16
+  title: 0
+field_type: link

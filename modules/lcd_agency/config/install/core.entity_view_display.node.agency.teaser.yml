@@ -1,0 +1,43 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.agency.field_agency_address
+    - field.field.node.agency.field_agency_admins
+    - field.field.node.agency.field_agency_email
+    - field.field.node.agency.field_agency_logo
+    - field.field.node.agency.field_agency_no_employees
+    - field.field.node.agency.field_agency_public_list
+    - field.field.node.agency.field_agency_score
+    - field.field.node.agency.field_agency_services
+    - field.field.node.agency.field_agency_website
+    - image.style.large
+    - node.type.agency
+  module:
+    - image
+    - user
+id: node.agency.teaser
+targetEntityType: node
+bundle: agency
+mode: teaser
+content:
+  field_agency_logo:
+    type: image
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      image_style: large
+      image_link: ''
+    third_party_settings: {  }
+hidden:
+  field_agency_address: true
+  field_agency_admins: true
+  field_agency_email: true
+  field_agency_no_employees: true
+  field_agency_public_list: true
+  field_agency_score: true
+  field_agency_services: true
+  field_agency_website: true
+  links: true

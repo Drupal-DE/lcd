@@ -1,8 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-name: 'Number of employees'
-vid: number_of_employees
-description: 'Number of employees for an organisation'
-hierarchy: 0
-weight: 0

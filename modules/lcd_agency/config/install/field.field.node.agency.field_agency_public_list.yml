@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_agency_public_list
+    - node.type.agency
+id: node.agency.field_agency_public_list
+field_name: field_agency_public_list
+entity_type: node
+bundle: agency
+label: 'Public listing'
+description: 'Allow agency to be displayed on public page across the website'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: Show
+  off_label: Hide
+field_type: boolean

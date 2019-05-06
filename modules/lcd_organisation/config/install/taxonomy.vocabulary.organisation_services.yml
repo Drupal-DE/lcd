@@ -1,8 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-name: 'Organisation services'
-vid: organisation_services
-description: 'Types of services offered by the organisation'
-hierarchy: 0
-weight: 0

@@ -1,0 +1,12 @@
+name: Agency
+description: 'Provide agency content type.'
+type: module
+core: 8.x
+dependencies:
+  - address
+  - field
+  - node
+  - taxonomy
+  - views
+  - link
+package: lcd

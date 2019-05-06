@@ -1,0 +1,28 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_agency_score
+    - node.type.agency
+    - taxonomy.vocabulary.agency_best_practices
+id: node.agency.field_agency_score
+field_name: field_agency_score
+entity_type: node
+bundle: agency
+label: 'Quality score'
+description: 'Check the best practices listed here that apply to your development process. Be honest and critical. Visitors will be presented only the total score, not which points are or are not achieved.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      agency_best_practices: agency_best_practices
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

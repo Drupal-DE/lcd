@@ -1,0 +1,91 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.agency.field_agency_address
+    - field.field.node.agency.field_agency_admins
+    - field.field.node.agency.field_agency_email
+    - field.field.node.agency.field_agency_logo
+    - field.field.node.agency.field_agency_no_employees
+    - field.field.node.agency.field_agency_public_list
+    - field.field.node.agency.field_agency_score
+    - field.field.node.agency.field_agency_services
+    - field.field.node.agency.field_agency_website
+    - node.type.agency
+  module:
+    - address
+    - image
+    - lcd_agency
+    - link
+    - user
+id: node.agency.default
+targetEntityType: node
+bundle: agency
+mode: default
+content:
+  field_agency_address:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: address_default
+    region: content
+  field_agency_email:
+    weight: 10
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_agency_logo:
+    weight: 1
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_agency_no_employees:
+    weight: 6
+    label: inline
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_agency_score:
+    weight: 9
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: agency_numeric_score
+    region: content
+  field_agency_services:
+    weight: 5
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_agency_website:
+    weight: 4
+    label: hidden
+    settings:
+      trim_length: 120
+      target: _blank
+      url_only: false
+      url_plain: false
+      rel: '0'
+    third_party_settings: {  }
+    type: link
+    region: content
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_agency_admins: true
+  field_agency_public_list: true

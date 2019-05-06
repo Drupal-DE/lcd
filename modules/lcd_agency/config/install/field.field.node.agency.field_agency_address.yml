@@ -1,0 +1,27 @@
+uuid: c2aa261c-fd9a-44e3-91a7-d661c7243a4b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_agency_address
+    - node.type.agency
+  module:
+    - address
+_core:
+  default_config_hash: Ipap1U1w-WeVdjkZZO4Fl22-OiMAG-LF4-jvyBY9Xw0
+id: node.agency.field_agency_address
+field_name: field_agency_address
+entity_type: node
+bundle: agency
+label: Address
+description: 'Agency''s primary contact address / office location'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  available_countries: {  }
+  langcode_override: ''
+  field_overrides: {  }
+  fields: {  }
+field_type: address

@@ -1,0 +1,139 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.agency.field_agency_address
+    - field.field.node.agency.field_agency_admins
+    - field.field.node.agency.field_agency_email
+    - field.field.node.agency.field_agency_logo
+    - field.field.node.agency.field_agency_no_employees
+    - field.field.node.agency.field_agency_public_list
+    - field.field.node.agency.field_agency_score
+    - field.field.node.agency.field_agency_services
+    - field.field.node.agency.field_agency_website
+    - image.style.thumbnail
+    - node.type.agency
+  module:
+    - address
+    - image
+    - link
+    - path
+id: node.agency.default
+targetEntityType: node
+bundle: agency
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_agency_address:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    type: address_default
+    region: content
+  field_agency_admins:
+    weight: 14
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_agency_email:
+    weight: 9
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: email_default
+    region: content
+  field_agency_logo:
+    weight: 7
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_agency_no_employees:
+    weight: 11
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_agency_public_list:
+    type: options_buttons
+    weight: 15
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_agency_score:
+    weight: 13
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_agency_services:
+    weight: 12
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_agency_website:
+    weight: 8
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  path:
+    type: path
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 3
+    region: content
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 6
+    region: content
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 4
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 1
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    region: content
+    third_party_settings: {  }
+hidden: {  }
