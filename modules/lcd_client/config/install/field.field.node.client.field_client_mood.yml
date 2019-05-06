@@ -2,22 +2,22 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_client_logo
+    - field.storage.node.field_client_mood
     - node.type.client
   module:
     - image
-id: node.client.field_client_logo
-field_name: field_client_logo
+id: node.client.field_client_mood
+field_name: field_client_mood
 entity_type: node
 bundle: client
-label: Logo
+label: Mood
 description: ''
 required: true
 translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  file_directory: 'clients/logo/[date:custom:Y]-[date:custom:m]'
+  file_directory: 'clients/mood/[date:custom:Y]-[date:custom:m]'
   file_extensions: 'png jpg jpeg'
   max_filesize: ''
   max_resolution: ''

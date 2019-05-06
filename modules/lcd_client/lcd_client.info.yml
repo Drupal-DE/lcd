@@ -1,11 +1,5 @@
-name: LCD client
-description: 'Provide Client content type.'
+name: Client
+description: 'Provide client functionality.'
 type: module
 core: 8.x
-dependencies:
-  - field
-  - node
-  - taxonomy
-  - views
-  - link
 package: lcd

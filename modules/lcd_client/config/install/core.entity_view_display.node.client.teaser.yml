@@ -3,15 +3,38 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.client.field_client_claim
+    - field.field.node.client.field_client_link
+    - field.field.node.client.field_client_logo
+    - field.field.node.client.field_client_mood
+    - image.style.large
     - node.type.client
   module:
+    - image
+    - text
     - user
 id: node.client.teaser
 targetEntityType: node
 bundle: client
 mode: teaser
 content:
-  links:
-    weight: 100
+  field_client_claim:
+    type: text_default
+    weight: 1
     region: content
-hidden: {  }
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_client_mood:
+    type: image
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      image_style: large
+      image_link: ''
+    third_party_settings: {  }
+hidden:
+  field_client_link: true
+  field_client_logo: true
+  links: true
