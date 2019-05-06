@@ -1,0 +1,8 @@
+# Schema for the configuration files of the Drupal Community theme.
+drupal_community.settings:
+  type: theme_settings
+  label: 'Drupal Community settings'
+  mapping:
+    font_size:
+      type: integer
+      label: Font size
