@@ -11,7 +11,7 @@ id: node.event.field_event_type
 field_name: field_event_type
 entity_type: node
 bundle: event
-label: 'Event type'
+label: Type
 description: ''
 required: true
 translatable: false
@@ -28,20 +28,14 @@ settings:
         direction: asc
       auto_create: false
       auto_create_bundle: ''
-  node:
-    handler: 'default:node'
-    handler_settings: {  }
-  file:
-    handler: 'default:file'
-    handler_settings: {  }
-  user:
-    handler: 'default:user'
-    handler_settings: {  }
   comment:
     handler: 'default:comment'
     handler_settings: {  }
   contact_message:
     handler: 'default:contact_message'
+    handler_settings: {  }
+  node:
+    handler: 'default:node'
     handler_settings: {  }
   block_content:
     handler: 'default:block_content'
@@ -49,7 +43,16 @@ settings:
   menu_link_content:
     handler: 'default:menu_link_content'
     handler_settings: {  }
+  file:
+    handler: 'default:file'
+    handler_settings: {  }
   shortcut:
     handler: 'default:shortcut'
+    handler_settings: {  }
+  user:
+    handler: 'default:user'
+    handler_settings: {  }
+  webform_submission:
+    handler: 'default:webform_submission'
     handler_settings: {  }
 field_type: dynamic_entity_reference

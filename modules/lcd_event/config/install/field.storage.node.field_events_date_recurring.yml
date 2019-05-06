@@ -2,15 +2,16 @@ langcode: en
 status: true
 dependencies:
   module:
-    - datetime_range
+    - date_recur
     - node
-id: node.field_event_date
-field_name: field_event_date
+id: node.field_events_date_recurring
+field_name: field_events_date_recurring
 entity_type: node
-type: daterange
+type: date_recur
 settings:
   datetime_type: datetime
-module: datetime_range
+  rrule_max_length: 256
+module: date_recur
 locked: false
 cardinality: 1
 translatable: true

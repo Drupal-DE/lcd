@@ -3,16 +3,14 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.storage.node.body
     - field.storage.node.field_event_location
     - node.type.event
-    - system.menu.main
   module:
+    - date_recur
     - datetime
     - geofield
     - leaflet_views
     - node
-    - text
     - user
 id: events
 label: Events
@@ -78,9 +76,12 @@ display:
       style:
         type: default
       row:
-        type: 'entity:node'
+        type: fields
         options:
-          view_mode: teaser
+          default_field_elements: true
+          inline: {  }
+          separator: ''
+          hide_empty: false
       fields:
         title:
           id: title
@@ -210,11 +211,11 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
-        body:
-          id: body
-          table: node__body
-          field: body
-          relationship: none
+        field_events_date_recurring_value:
+          id: field_events_date_recurring_value
+          table: date_recur__node__field_events_date_recurring
+          field: field_events_date_recurring_value
+          relationship: field_events_date_recurring_occurrences
           group_type: group
           admin_label: ''
           label: ''
@@ -258,21 +259,62 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          click_sort_column: value
-          type: text_summary_or_trimmed
-          settings:
-            trim_length: 300
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
+          date_format: fallback
+          custom_date_format: ''
+          timezone: ''
+          plugin_id: date_recur_date
+        field_events_date_recurring_end_value:
+          id: field_events_date_recurring_end_value
+          table: date_recur__node__field_events_date_recurring
+          field: field_events_date_recurring_end_value
+          relationship: field_events_date_recurring_occurrences
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          date_format: fallback
+          custom_date_format: ''
+          timezone: ''
+          plugin_id: date_recur_date
       filters:
         status:
           value: '1'
@@ -325,18 +367,61 @@ display:
           entity_type: node
           entity_field: type
           plugin_id: bundle
-        field_event_date_end_value:
-          id: field_event_date_end_value
-          table: node__field_event_date
-          field: field_event_date_end_value
-          relationship: none
+        field_events_date_recurring_end_value:
+          id: field_events_date_recurring_end_value
+          table: date_recur__node__field_events_date_recurring
+          field: field_events_date_recurring_end_value
+          relationship: field_events_date_recurring_occurrences
           group_type: group
           admin_label: ''
           operator: '>='
           value:
             min: ''
             max: ''
-            value: '+0 hours'
+            value: today
+            type: offset
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            placeholder: ''
+            min_placeholder: ''
+            max_placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: datetime
+        field_events_date_recurring_value:
+          id: field_events_date_recurring_value
+          table: date_recur__node__field_events_date_recurring
+          field: field_events_date_recurring_value
+          relationship: field_events_date_recurring_occurrences
+          group_type: group
+          admin_label: ''
+          operator: '<='
+          value:
+            min: ''
+            max: ''
+            value: '+1 year'
             type: offset
           group: 1
           exposed: false
@@ -369,10 +454,10 @@ display:
             group_items: {  }
           plugin_id: datetime
       sorts:
-        field_event_date_value:
-          id: field_event_date_value
-          table: node__field_event_date
-          field: field_event_date_value
+        field_events_date_recurring_value:
+          id: field_events_date_recurring_value
+          table: node__field_events_date_recurring
+          field: field_events_date_recurring_value
           relationship: none
           group_type: group
           admin_label: ''
@@ -382,21 +467,33 @@ display:
             label: ''
           granularity: second
           plugin_id: datetime
-        created:
-          id: created
+        title:
+          id: title
           table: node_field_data
-          field: created
-          order: DESC
-          entity_type: node
-          entity_field: created
-          plugin_id: date
+          field: title
           relationship: none
           group_type: group
           admin_label: ''
+          order: DESC
+          exposed: false
+          expose:
+            label: ''
+          entity_type: node
+          entity_field: title
+          plugin_id: standard
+        field_events_date_recurring_value_1:
+          id: field_events_date_recurring_value_1
+          table: date_recur__node__field_events_date_recurring
+          field: field_events_date_recurring_value
+          relationship: field_events_date_recurring_occurrences
+          group_type: group
+          admin_label: ''
+          order: ASC
           exposed: false
           expose:
             label: ''
           granularity: second
+          plugin_id: datetime
       title: Events
       header: {  }
       footer: {  }
@@ -414,9 +511,23 @@ display:
             value: 'There are no future events.'
             format: basic_html
           plugin_id: text
-      relationships: {  }
+      relationships:
+        field_events_date_recurring_occurrences:
+          id: field_events_date_recurring_occurrences
+          table: node_field_data
+          field: field_events_date_recurring_occurrences
+          relationship: none
+          group_type: group
+          admin_label: 'Occurrences of Date'
+          required: true
+          entity_type: node
+          plugin_id: standard
       arguments: {  }
       display_extenders: {  }
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
     cache_metadata:
       max-age: -1
       contexts:
@@ -426,12 +537,11 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
-        - 'config:field.storage.node.body'
         - 'config:field.storage.node.field_event_location'
   block_1:
     display_plugin: block
     id: block_1
-    display_title: Block
+    display_title: Map
     position: 2
     display_options:
       display_extenders: {  }
@@ -446,13 +556,23 @@ display:
       style:
         type: leafet_map
         options:
-          grouping: {  }
+          grouping:
+            -
+              field: title
+              rendered: true
+              rendered_strip: false
           data_source: field_event_location
-          name_field: ''
+          name_field: title
           description_field: title
           view_mode: full
-          map: 'OSM Mapnik'
+          leaflet_map: 'OSM Mapnik'
           height: '400'
+          hide_empty_map: 0
+          disable_wheel: 0
+          fullscreen_control: 1
+          reset_map:
+            control: 0
+            position: topright
           map_position:
             force: 0
             center:
@@ -470,16 +590,21 @@ display:
             iconAnchor:
               x: ''
               'y': ''
+            shadowSize:
+              x: ''
+              'y': ''
             shadowAnchor:
               x: ''
               'y': ''
             popupAnchor:
               x: ''
               'y': ''
+          path: '{"color":"#3388ff","opacity":"1.0","stroke":true,"weight":3,"fill":"depends","fillColor":"*","fillOpacity":"0.2"}'
       defaults:
         style: false
         row: false
         pager: false
+      display_description: ''
     cache_metadata:
       max-age: -1
       contexts:
@@ -488,20 +613,15 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
-        - 'config:field.storage.node.body'
         - 'config:field.storage.node.field_event_location'
-  page_1:
-    display_plugin: page
-    id: page_1
-    display_title: Page
-    position: 1
+  block_2:
+    display_plugin: block
+    id: block_2
+    display_title: Teaser
+    position: 3
     display_options:
       display_extenders: {  }
-      path: events
-      menu:
-        type: normal
-        title: Events
-        menu_name: main
+      display_description: ''
     cache_metadata:
       max-age: -1
       contexts:
@@ -511,5 +631,4 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
-        - 'config:field.storage.node.body'
         - 'config:field.storage.node.field_event_location'

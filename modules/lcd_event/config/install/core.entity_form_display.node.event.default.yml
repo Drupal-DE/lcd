@@ -2,15 +2,15 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.event.body
-    - field.field.node.event.field_event_date
+    - field.field.node.event.field_event_body
     - field.field.node.event.field_event_location
     - field.field.node.event.field_event_organizers
     - field.field.node.event.field_event_type
     - field.field.node.event.field_event_website
+    - field.field.node.event.field_events_date_recurring
     - node.type.event
   module:
-    - datetime_range
+    - date_recur_modular
     - dynamic_entity_reference
     - geofield_map
     - link
@@ -21,29 +21,22 @@ targetEntityType: node
 bundle: event
 mode: default
 content:
-  body:
-    type: text_textarea_with_summary
-    weight: 6
-    settings:
-      rows: 9
-      summary_rows: 3
-      placeholder: ''
-    third_party_settings: {  }
-    region: content
   created:
     type: datetime_timestamp
     weight: 2
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_event_date:
-    weight: 8
-    settings: {  }
+  field_event_body:
+    weight: 9
+    settings:
+      rows: 5
+      placeholder: ''
     third_party_settings: {  }
-    type: daterange_default
+    type: text_textarea
     region: content
   field_event_location:
-    weight: 10
+    weight: 11
     settings:
       map_google_places:
         places_additional_options: ''
@@ -72,11 +65,12 @@ content:
       html5_geolocation: 0
       map_google_api_key: ''
       zoom_level: 5
+      hide_coordinates: false
     third_party_settings: {  }
     type: geofield_map
     region: content
   field_event_organizers:
-    weight: 11
+    weight: 10
     settings:
       match_operator: CONTAINS
       size: 40
@@ -85,18 +79,24 @@ content:
     type: dynamic_entity_reference_default
     region: content
   field_event_type:
-    weight: 7
+    weight: 6
     settings: {  }
     third_party_settings: {  }
     type: dynamic_entity_reference_options_select
     region: content
   field_event_website:
-    weight: 9
+    weight: 7
     settings:
       placeholder_url: ''
       placeholder_title: ''
     third_party_settings: {  }
     type: link_default
+    region: content
+  field_events_date_recurring:
+    weight: 8
+    settings: {  }
+    third_party_settings: {  }
+    type: date_recur_modular_sierra
     region: content
   path:
     type: path

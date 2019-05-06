@@ -4,5 +4,4 @@ dependencies: {  }
 name: 'Event types'
 vid: event_types
 description: 'Types of Drupal events'
-hierarchy: 0
 weight: 0

@@ -10,13 +10,13 @@ id: node.event.field_event_website
 field_name: field_event_website
 entity_type: node
 bundle: event
-label: 'Event website'
+label: Website
 description: ''
 required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  link_type: 17
-  title: 1
+  link_type: 16
+  title: 0
 field_type: link

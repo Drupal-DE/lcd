@@ -2,54 +2,50 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.date_format.medium
     - core.entity_view_mode.node.teaser
-    - field.field.node.event.body
-    - field.field.node.event.field_event_date
+    - field.field.node.event.field_event_body
     - field.field.node.event.field_event_location
+    - field.field.node.event.field_event_organizers
     - field.field.node.event.field_event_type
     - field.field.node.event.field_event_website
+    - field.field.node.event.field_events_date_recurring
     - node.type.event
   module:
-    - datetime_range
+    - date_recur
     - dynamic_entity_reference
-    - text
     - user
 id: node.event.teaser
 targetEntityType: node
 bundle: event
 mode: teaser
 content:
-  body:
-    label: hidden
-    type: text_summary_or_trimmed
-    weight: 3
-    settings:
-      trim_length: 600
-    third_party_settings: {  }
-    region: content
-  field_event_date:
-    type: daterange_default
-    weight: 2
-    region: content
-    label: hidden
-    settings:
-      separator: '-'
-      format_type: medium
-      timezone_override: ''
-    third_party_settings: {  }
   field_event_type:
     type: dynamic_entity_reference_label
-    weight: 1
+    weight: 0
     region: content
     label: inline
     settings:
       link: true
     third_party_settings: {  }
-  links:
-    weight: 0
+  field_events_date_recurring:
+    type: date_recur_basic_formatter
+    weight: 1
     region: content
-    settings: {  }
+    label: above
+    settings:
+      format_type: medium
+      occurrence_format_type: medium
+      same_end_date_format_type: medium
+      separator: '-'
+      timezone_override: ''
+      interpreter: ''
+      show_next: 1
+      count_per_item: true
     third_party_settings: {  }
 hidden:
+  field_event_body: true
   field_event_location: true
+  field_event_organizers: true
   field_event_website: true
+  links: true

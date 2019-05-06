@@ -1,4 +1,4 @@
-name: LCD event
+name: Event
 description: 'Provide Event content type and related configuration.'
 type: module
 core: 8.x
@@ -12,8 +12,8 @@ dependencies:
   - leaflet
   - leaflet_views
   - link
-  - datetime_range
+  - date_recur
+  - date_recur_modular
   - dynamic_entity_reference
-  - lcd_organisation
-  - lcd_user_group
+  - lcd_agency
 package: lcd
