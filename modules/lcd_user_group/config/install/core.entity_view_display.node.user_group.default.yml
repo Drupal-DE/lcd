@@ -2,14 +2,16 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.user_group.body
-    - field.field.node.user_group.field_user_group_address
+    - field.field.node.user_group.field_user_group_body
+    - field.field.node.user_group.field_user_group_logo
     - field.field.node.user_group.field_user_group_organizers
     - field.field.node.user_group.field_user_group_sponsors
+    - field.field.node.user_group.field_user_group_website
     - node.type.user_group
   module:
-    - address
     - dynamic_entity_reference
+    - image
+    - link
     - text
     - user
 id: node.user_group.default
@@ -17,19 +19,21 @@ targetEntityType: node
 bundle: user_group
 mode: default
 content:
-  body:
-    weight: 101
+  field_user_group_body:
+    weight: 106
     label: above
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
-  field_user_group_address:
-    weight: 102
+  field_user_group_logo:
+    weight: 109
     label: above
-    settings: {  }
+    settings:
+      image_style: ''
+      image_link: ''
     third_party_settings: {  }
-    type: address_default
+    type: image
     region: content
   field_user_group_organizers:
     weight: 104
@@ -46,6 +50,18 @@ content:
       link: true
     third_party_settings: {  }
     type: dynamic_entity_reference_label
+    region: content
+  field_user_group_website:
+    weight: 108
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
     region: content
   links:
     weight: 100

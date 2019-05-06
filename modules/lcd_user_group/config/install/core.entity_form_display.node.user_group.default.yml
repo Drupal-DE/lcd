@@ -2,14 +2,17 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.user_group.body
-    - field.field.node.user_group.field_user_group_address
+    - field.field.node.user_group.field_user_group_body
+    - field.field.node.user_group.field_user_group_logo
     - field.field.node.user_group.field_user_group_organizers
     - field.field.node.user_group.field_user_group_sponsors
+    - field.field.node.user_group.field_user_group_website
+    - image.style.thumbnail
     - node.type.user_group
   module:
-    - address
     - dynamic_entity_reference
+    - image
+    - link
     - path
     - text
 id: node.user_group.default
@@ -17,30 +20,30 @@ targetEntityType: node
 bundle: user_group
 mode: default
 content:
-  body:
-    weight: 121
-    settings:
-      rows: 9
-      summary_rows: 3
-      placeholder: ''
-    third_party_settings: {  }
-    type: text_textarea_with_summary
-    region: content
   created:
     type: datetime_timestamp
-    weight: 10
+    weight: 4
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_user_group_address:
-    weight: 122
+  field_user_group_body:
+    weight: 10
     settings:
-      default_country: null
+      rows: 5
+      placeholder: ''
     third_party_settings: {  }
-    type: address_default
+    type: text_textarea
+    region: content
+  field_user_group_logo:
+    weight: 2
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
     region: content
   field_user_group_organizers:
-    weight: 124
+    weight: 11
     settings:
       match_operator: CONTAINS
       size: 40
@@ -49,7 +52,7 @@ content:
     type: dynamic_entity_reference_default
     region: content
   field_user_group_sponsors:
-    weight: 125
+    weight: 12
     settings:
       match_operator: CONTAINS
       size: 40
@@ -57,9 +60,17 @@ content:
     third_party_settings: {  }
     type: dynamic_entity_reference_default
     region: content
+  field_user_group_website:
+    weight: 1
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
   path:
     type: path
-    weight: 30
+    weight: 7
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -67,26 +78,26 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 15
+    weight: 5
     region: content
     third_party_settings: {  }
   status:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 120
+    weight: 8
     region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 16
+    weight: 6
     region: content
     third_party_settings: {  }
   title:
     type: string_textfield
-    weight: -5
+    weight: 0
     region: content
     settings:
       size: 60
@@ -94,7 +105,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 5
+    weight: 3
     settings:
       match_operator: CONTAINS
       size: 60

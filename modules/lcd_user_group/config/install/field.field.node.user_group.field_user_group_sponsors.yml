@@ -3,7 +3,7 @@ status: true
 dependencies:
   config:
     - field.storage.node.field_user_group_sponsors
-    - node.type.organisation
+    - node.type.agency
     - node.type.user_group
   module:
     - dynamic_entity_reference
@@ -22,7 +22,7 @@ settings:
     handler: 'default:node'
     handler_settings:
       target_bundles:
-        organisation: organisation
+        agency: agency
       sort:
         field: _none
       auto_create: false
@@ -57,5 +57,8 @@ settings:
     handler_settings: {  }
   taxonomy_term:
     handler: 'default:taxonomy_term'
+    handler_settings: {  }
+  webform_submission:
+    handler: 'default:webform_submission'
     handler_settings: {  }
 field_type: dynamic_entity_reference

@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_user_group_body
+    - node.type.user_group
+  module:
+    - text
+id: node.user_group.field_user_group_body
+field_name: field_user_group_body
+entity_type: node
+bundle: user_group
+label: Body
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

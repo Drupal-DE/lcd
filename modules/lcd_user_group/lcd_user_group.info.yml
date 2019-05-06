@@ -1,4 +1,4 @@
-name: LCD user group
+name: User group
 description: 'Provide User Group content type and related configuration.'
 type: module
 core: 8.x
@@ -14,5 +14,5 @@ dependencies:
   - link
   - datetime_range
   - dynamic_entity_reference
-  - lcd_organisation
+  - lcd_agency
 package: lcd

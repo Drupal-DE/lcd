@@ -2,14 +2,14 @@ langcode: en
 status: true
 dependencies:
   module:
-    - address
+    - link
     - node
-id: node.field_user_group_address
-field_name: field_user_group_address
+id: node.field_user_group_website
+field_name: field_user_group_website
 entity_type: node
-type: address
+type: link
 settings: {  }
-module: address
+module: link
 locked: false
 cardinality: 1
 translatable: true
