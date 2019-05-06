@@ -25,7 +25,7 @@ class DrupalCommunityBlock extends BlockBase {
             <div class="darkener">
                 <div class="content">
                     <div>
-                        <img class="logo" src="' . drupal_get_path('module', 'lcd_banner') . '/images/drupal-community/logo.svg" alt="' . $this->t('Drupal logo') . '" />
+                        <img class="logo" src="' . file_create_url(drupal_get_path('module', 'lcd_banner') . '/images/drupal-community/logo.svg') . '" alt="' . $this->t('Drupal logo') . '" />
                     </div>
                     <div class="message">
                         <h2>' . $this->t('<strong>Drupal</strong> is powered by an<br /><strong>open source community</strong>') . '</h2>
