@@ -3,15 +3,16 @@ status: true
 dependencies:
   module:
     - node
-id: node.field_case_study_orgranisations
-field_name: field_case_study_orgranisations
+    - webform
+id: node.field_case_study_contact
+field_name: field_case_study_contact
 entity_type: node
 type: entity_reference
 settings:
-  target_type: node
+  target_type: webform
 module: core
 locked: false
-cardinality: -1
+cardinality: 1
 translatable: true
 indexes: {  }
 persist_with_no_fields: false

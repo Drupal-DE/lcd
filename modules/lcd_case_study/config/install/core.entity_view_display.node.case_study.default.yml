@@ -2,13 +2,15 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.case_study.body
+    - field.field.node.case_study.field_case_study_body
+    - field.field.node.case_study.field_case_study_contact
     - field.field.node.case_study.field_case_study_drupal_version
     - field.field.node.case_study.field_case_study_key_projects
     - field.field.node.case_study.field_case_study_logo
-    - field.field.node.case_study.field_case_study_orgranisations
-    - field.field.node.case_study.field_case_study_screenshots
+    - field.field.node.case_study.field_case_study_mood
+    - field.field.node.case_study.field_case_study_agencies
     - field.field.node.case_study.field_case_study_team_members
+    - field.field.node.case_study.field_case_study_testimonial
     - field.field.node.case_study.field_case_study_website
     - node.type.case_study
   module:
@@ -22,12 +24,21 @@ targetEntityType: node
 bundle: case_study
 mode: default
 content:
-  body:
-    label: hidden
-    type: text_default
-    weight: 2
+  field_case_study_body:
+    weight: 9
+    label: above
     settings: {  }
     third_party_settings: {  }
+    type: text_default
+    region: content
+  field_case_study_contact:
+    weight: 12
+    label: above
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+    type: entity_reference_entity_view
     region: content
   field_case_study_drupal_version:
     weight: 3
@@ -44,7 +55,16 @@ content:
     third_party_settings: {  }
     type: entity_reference_label
     region: content
-  field_case_study_orgranisations:
+  field_case_study_mood:
+    weight: 10
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_case_study_agencies:
     weight: 5
     label: above
     settings:
@@ -52,17 +72,16 @@ content:
     third_party_settings: {  }
     type: entity_reference_label
     region: content
-  field_case_study_screenshots:
-    weight: 7
-    label: hidden
-    settings:
-      image_style: ''
-      image_link: ''
-    third_party_settings: {  }
-    type: image
-    region: content
   field_case_study_team_members:
     weight: 6
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_case_study_testimonial:
+    weight: 11
     label: above
     settings:
       link: true

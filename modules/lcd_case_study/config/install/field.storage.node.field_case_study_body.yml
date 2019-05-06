@@ -3,16 +3,15 @@ status: true
 dependencies:
   module:
     - node
-    - user
-id: node.field_case_study_team_members
-field_name: field_case_study_team_members
+    - text
+id: node.field_case_study_body
+field_name: field_case_study_body
 entity_type: node
-type: entity_reference
-settings:
-  target_type: user
-module: core
+type: text_long
+settings: {  }
+module: text
 locked: false
-cardinality: -1
+cardinality: 1
 translatable: true
 indexes: {  }
 persist_with_no_fields: false

@@ -4,5 +4,4 @@ dependencies: {  }
 name: 'Drupal contributed projects'
 vid: drupal_contributed_projects
 description: Modules/Themes/Distributions
-hierarchy: 0
 weight: 0

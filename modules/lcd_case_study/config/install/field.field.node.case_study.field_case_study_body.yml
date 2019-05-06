@@ -2,20 +2,19 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.body
+    - field.storage.node.field_case_study_body
     - node.type.case_study
   module:
     - text
-id: node.case_study.body
-field_name: body
+id: node.case_study.field_case_study_body
+field_name: field_case_study_body
 entity_type: node
 bundle: case_study
 label: Body
 description: ''
-required: false
-translatable: true
+required: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
-settings:
-  display_summary: true
-field_type: text_with_summary
+settings: {  }
+field_type: text_long

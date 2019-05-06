@@ -1,4 +1,4 @@
-name: LCD case study
+name: Case study
 description: 'Provide Case Study content type.'
 type: module
 core: 8.x
@@ -8,5 +8,7 @@ dependencies:
   - taxonomy
   - views
   - link
-  - lcd_organisation
+  - webform
+  - lcd_agency
+  - lcd_testimonial
 package: lcd

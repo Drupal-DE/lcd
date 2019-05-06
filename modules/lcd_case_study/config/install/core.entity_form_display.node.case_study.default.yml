@@ -2,13 +2,15 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.case_study.body
+    - field.field.node.case_study.field_case_study_body
+    - field.field.node.case_study.field_case_study_contact
     - field.field.node.case_study.field_case_study_drupal_version
     - field.field.node.case_study.field_case_study_key_projects
     - field.field.node.case_study.field_case_study_logo
-    - field.field.node.case_study.field_case_study_orgranisations
-    - field.field.node.case_study.field_case_study_screenshots
+    - field.field.node.case_study.field_case_study_mood
+    - field.field.node.case_study.field_case_study_agencies
     - field.field.node.case_study.field_case_study_team_members
+    - field.field.node.case_study.field_case_study_testimonial
     - field.field.node.case_study.field_case_study_website
     - image.style.thumbnail
     - node.type.case_study
@@ -22,21 +24,29 @@ targetEntityType: node
 bundle: case_study
 mode: default
 content:
-  body:
-    type: text_textarea_with_summary
-    weight: 9
-    settings:
-      rows: 9
-      summary_rows: 3
-      placeholder: ''
-    third_party_settings: {  }
-    region: content
   created:
     type: datetime_timestamp
     weight: 2
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_case_study_body:
+    weight: 14
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_case_study_contact:
+    weight: 12
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
   field_case_study_drupal_version:
     weight: 10
     settings: {  }
@@ -44,7 +54,7 @@ content:
     type: options_select
     region: content
   field_case_study_key_projects:
-    weight: 11
+    weight: 15
     settings:
       match_operator: CONTAINS
       size: 60
@@ -60,8 +70,16 @@ content:
     third_party_settings: {  }
     type: image_image
     region: content
-  field_case_study_orgranisations:
-    weight: 12
+  field_case_study_mood:
+    weight: 9
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_case_study_agencies:
+    weight: 16
     settings:
       match_operator: CONTAINS
       size: 60
@@ -69,16 +87,17 @@ content:
     third_party_settings: {  }
     type: entity_reference_autocomplete
     region: content
-  field_case_study_screenshots:
-    weight: 14
-    settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
-    third_party_settings: {  }
-    type: image_image
-    region: content
   field_case_study_team_members:
-    weight: 13
+    weight: 17
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_case_study_testimonial:
+    weight: 11
     settings:
       match_operator: CONTAINS
       size: 60

@@ -12,7 +12,7 @@ entity_type: node
 bundle: case_study
 label: 'Drupal version'
 description: ''
-required: false
+required: true
 translatable: false
 default_value: {  }
 default_value_callback: ''
