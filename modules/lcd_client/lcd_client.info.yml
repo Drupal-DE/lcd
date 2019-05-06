@@ -3,3 +3,8 @@ description: 'Provide client functionality.'
 type: module
 core: 8.x
 package: lcd
+dependencies:
+  - file
+  - image
+  - link
+  - text
