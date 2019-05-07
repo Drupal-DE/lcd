@@ -1,0 +1,25 @@
+uuid: c886627a-9c88-4351-af2a-db4e4211ebb2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_solution_contact
+    - node.type.solution
+  module:
+    - webform
+id: node.solution.field_solution_contact
+field_name: field_solution_contact
+entity_type: node
+bundle: solution
+label: Contact
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:webform'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+field_type: webform

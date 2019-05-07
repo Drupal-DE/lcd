@@ -1,16 +1,22 @@
+uuid: f248c97e-73a5-4213-877e-542967cd17e5
 langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.solution.field_solution_agencies
     - field.field.node.solution.field_solution_benefits
     - field.field.node.solution.field_solution_body
     - field.field.node.solution.field_solution_case_studies
+    - field.field.node.solution.field_solution_contact
     - field.field.node.solution.field_solution_features
     - field.field.node.solution.field_solution_personas
     - node.type.solution
   module:
     - path
     - text
+    - webform
+_core:
+  default_config_hash: P_76NBNEv032o8YrAmKp7TKl0FEw1be8Rdd-3efAQIM
 id: node.solution.default
 targetEntityType: node
 bundle: solution
@@ -22,6 +28,15 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_solution_agencies:
+    weight: 126
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
   field_solution_benefits:
     weight: 124
     settings:
@@ -46,6 +61,13 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: entity_reference_autocomplete
+    region: content
+  field_solution_contact:
+    weight: 127
+    settings:
+      default_data: true
+    third_party_settings: {  }
+    type: webform_entity_reference_select
     region: content
   field_solution_features:
     weight: 125

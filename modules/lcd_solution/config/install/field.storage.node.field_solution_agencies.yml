@@ -1,0 +1,19 @@
+uuid: d408c9b1-dbc1-4829-b0d5-988c7f3e3a83
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_solution_agencies
+field_name: field_solution_agencies
+entity_type: node
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
