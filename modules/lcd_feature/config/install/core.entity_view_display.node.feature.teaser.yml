@@ -1,16 +1,16 @@
+uuid: d62cf515-9604-414d-ac9d-3236a69df74f
 langcode: en
 status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.feature.field_feature_body
-    - field.field.node.feature.field_feature_image
-    - image.style.large
     - node.type.feature
   module:
-    - image
     - text
     - user
+_core:
+  default_config_hash: ySMJjZk1pgI83Tlr7nDhNpq0x69MglM-IS21FBcNDYo
 id: node.feature.teaser
 targetEntityType: node
 bundle: feature
@@ -22,15 +22,6 @@ content:
     region: content
     label: hidden
     settings: {  }
-    third_party_settings: {  }
-  field_feature_image:
-    type: image
-    weight: 0
-    region: content
-    label: hidden
-    settings:
-      image_style: large
-      image_link: ''
     third_party_settings: {  }
 hidden:
   links: true

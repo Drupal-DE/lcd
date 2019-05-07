@@ -1,15 +1,16 @@
+uuid: 248e1877-975c-4b29-8b61-04ac80692aec
 langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.feature.field_feature_benefits
     - field.field.node.feature.field_feature_body
-    - field.field.node.feature.field_feature_image
-    - image.style.thumbnail
     - node.type.feature
   module:
-    - image
     - path
     - text
+_core:
+  default_config_hash: jGF-DMKfu6cJqv5bZDEJZXW_GfmZ7Ot6y4emjANbTcU
 id: node.feature.default
 targetEntityType: node
 bundle: feature
@@ -21,6 +22,15 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_feature_benefits:
+    weight: 26
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
   field_feature_body:
     weight: 8
     settings:
@@ -28,14 +38,6 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: text_textarea
-    region: content
-  field_feature_image:
-    weight: 7
-    settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
-    third_party_settings: {  }
-    type: image_image
     region: content
   path:
     type: path
