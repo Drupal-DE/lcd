@@ -1,0 +1,17 @@
+uuid: 3b2208d8-ab80-42e0-ae8c-49b936142a21
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Benefit
+type: benefit
+description: 'Use <em>benefits</em> to describe features.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

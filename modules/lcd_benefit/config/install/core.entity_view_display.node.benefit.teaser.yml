@@ -1,0 +1,37 @@
+uuid: 6b17f8d8-27d0-41ad-a538-2f49883ab60f
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.benefit.field_benefit_body
+    - field.field.node.benefit.field_benefit_image
+    - image.style.large
+    - node.type.benefit
+  module:
+    - image
+    - text
+    - user
+id: node.benefit.teaser
+targetEntityType: node
+bundle: benefit
+mode: teaser
+content:
+  field_benefit_body:
+    type: text_default
+    weight: 1
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_benefit_image:
+    type: image
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      image_style: large
+      image_link: ''
+    third_party_settings: {  }
+hidden:
+  links: true

@@ -1,0 +1,5 @@
+name: Benefit
+type: module
+description: Provide benefit functionality.
+package: lcd
+core: 8.x
