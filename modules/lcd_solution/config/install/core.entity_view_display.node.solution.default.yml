@@ -26,24 +26,6 @@ third_party_settings:
         layout_id: layout_onecol
         layout_settings: {  }
         components:
-          fc4e4c6d-60d5-4355-bbff-f90a8ff41a97:
-            uuid: fc4e4c6d-60d5-4355-bbff-f90a8ff41a97
-            region: content
-            configuration:
-              id: 'field_block:node:solution:field_solution_personas'
-              label: Personas
-              provider: layout_builder
-              label_display: '0'
-              formatter:
-                label: hidden
-                type: entity_reference_entity_view
-                settings:
-                  view_mode: teaser
-                third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-            additional: {  }
-            weight: 1
           a0fe8af6-cb77-4f20-942f-eb50b4799d5d:
             uuid: a0fe8af6-cb77-4f20-942f-eb50b4799d5d
             region: content
@@ -61,45 +43,31 @@ third_party_settings:
                 entity: layout_builder.entity
             additional: {  }
             weight: 0
-          8de6acbd-0188-4578-a101-6135d269b799:
-            uuid: 8de6acbd-0188-4578-a101-6135d269b799
+          2d61b17b-660a-4c85-ac85-762c7cb47efe:
+            uuid: 2d61b17b-660a-4c85-ac85-762c7cb47efe
             region: content
             configuration:
+              id: 'field_block:node:solution:field_solution_personas'
+              label: Personas
+              provider: layout_builder
               label_display: '0'
+              formatter:
+                label: hidden
+                type: entity_reference_entity_view
+                settings:
+                  view_mode: teaser
+                third_party_settings: {  }
               context_mapping:
                 entity: layout_builder.entity
-              id: 'field_block:node:solution:field_solution_agencies'
-              formatter:
-                label: above
-                settings:
-                  link: true
-                third_party_settings: {  }
-                type: entity_reference_label
             additional: {  }
-            weight: 2
-          aeab8a97-20b4-489a-ba86-77ba49cc1b77:
-            uuid: aeab8a97-20b4-489a-ba86-77ba49cc1b77
-            region: content
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'field_block:node:solution:field_solution_contact'
-              formatter:
-                label: above
-                settings:
-                  source_entity: true
-                third_party_settings: {  }
-                type: webform_entity_reference_entity_view
-            additional: {  }
-            weight: 3
+            weight: 1
         third_party_settings: {  }
       -
         layout_id: layout_onecol
         layout_settings: {  }
         components:
-          f41fdb49-d994-476f-a9c2-df1154e1cdd6:
-            uuid: f41fdb49-d994-476f-a9c2-df1154e1cdd6
+          680f6a8e-8048-4bff-acd5-808d5333b187:
+            uuid: 680f6a8e-8048-4bff-acd5-808d5333b187
             region: content
             configuration:
               id: 'field_block:node:solution:field_solution_case_studies'
@@ -121,8 +89,8 @@ third_party_settings:
         layout_id: layout_onecol
         layout_settings: {  }
         components:
-          329e36f5-6fdc-44fb-a697-00c0f8e8a5e4:
-            uuid: 329e36f5-6fdc-44fb-a697-00c0f8e8a5e4
+          b1fe4258-8f81-444c-b998-6f92f4b54d8f:
+            uuid: b1fe4258-8f81-444c-b998-6f92f4b54d8f
             region: content
             configuration:
               id: 'field_block:node:solution:field_solution_benefits'
@@ -143,8 +111,8 @@ third_party_settings:
         layout_id: layout_onecol
         layout_settings: {  }
         components:
-          1e78cc2b-7b63-49eb-abf2-72c78240f18e:
-            uuid: 1e78cc2b-7b63-49eb-abf2-72c78240f18e
+          221a6189-f017-465d-b159-c0840efa1ad3:
+            uuid: 221a6189-f017-465d-b159-c0840efa1ad3
             region: content
             configuration:
               id: 'field_block:node:solution:field_solution_features'
@@ -162,8 +130,50 @@ third_party_settings:
             additional: {  }
             weight: 0
         third_party_settings: {  }
+      -
+        layout_id: layout_twocol_section
+        layout_settings:
+          column_widths: 50-50
+        components:
+          ddb0c2c8-b2b8-443e-b8c0-f91931af34fb:
+            uuid: ddb0c2c8-b2b8-443e-b8c0-f91931af34fb
+            region: first
+            configuration:
+              id: 'field_block:node:solution:field_solution_agencies'
+              label: Agencies
+              provider: layout_builder
+              label_display: visible
+              formatter:
+                label: hidden
+                type: entity_reference_entity_view
+                settings:
+                  view_mode: teaser
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 0
+          2d5467b9-e2fa-4f29-9899-f184a5ef9ed1:
+            uuid: 2d5467b9-e2fa-4f29-9899-f184a5ef9ed1
+            region: second
+            configuration:
+              id: 'field_block:node:solution:field_solution_contact'
+              label: Contact
+              provider: layout_builder
+              label_display: visible
+              formatter:
+                label: hidden
+                type: webform_entity_reference_entity_view
+                settings:
+                  source_entity: true
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
 _core:
-  default_config_hash: EGlga1wf3Himk2wUEXZDc56IyDQ5s3GmFS8CPU4a_uE
+  default_config_hash: mbV7JWdef3onlPjUed_mC8gpkQMdCtCfCBeFQZgsqbU
 id: node.solution.default
 targetEntityType: node
 bundle: solution
