@@ -3,41 +3,49 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.case_study.field_case_study_agencies
     - field.field.node.case_study.field_case_study_body
     - field.field.node.case_study.field_case_study_contact
     - field.field.node.case_study.field_case_study_drupal_version
     - field.field.node.case_study.field_case_study_key_projects
     - field.field.node.case_study.field_case_study_logo
     - field.field.node.case_study.field_case_study_mood
-    - field.field.node.case_study.field_case_study_agencies
     - field.field.node.case_study.field_case_study_team_members
     - field.field.node.case_study.field_case_study_testimonial
     - field.field.node.case_study.field_case_study_website
+    - image.style.large
     - node.type.case_study
   module:
     - image
+    - text
     - user
 id: node.case_study.teaser
 targetEntityType: node
 bundle: case_study
 mode: teaser
 content:
+  field_case_study_body:
+    type: text_default
+    weight: 1
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
   field_case_study_mood:
     type: image
     weight: 0
     region: content
-    label: above
+    label: hidden
     settings:
-      image_style: ''
+      image_style: large
       image_link: ''
     third_party_settings: {  }
 hidden:
-  field_case_study_body: true
+  field_case_study_agencies: true
   field_case_study_contact: true
   field_case_study_drupal_version: true
   field_case_study_key_projects: true
   field_case_study_logo: true
-  field_case_study_agencies: true
   field_case_study_team_members: true
   field_case_study_testimonial: true
   field_case_study_website: true

@@ -1,12 +1,9 @@
-uuid: bb697305-29d7-435e-904d-eb7807333929
 langcode: en
 status: true
 dependencies:
   module:
     - address
     - node
-_core:
-  default_config_hash: AKCKcEaZoq8ZIFz82TsX0UmjoPa6qufSQnIzKSfYNgE
 id: node.field_agency_address
 field_name: field_agency_address
 entity_type: node
