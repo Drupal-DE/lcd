@@ -1,0 +1,38 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.persona.field_persona_body
+    - field.field.node.persona.field_persona_image
+    - node.type.persona
+  module:
+    - image
+    - text
+    - user
+id: node.persona.default
+targetEntityType: node
+bundle: persona
+mode: default
+content:
+  field_persona_body:
+    weight: 102
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_persona_image:
+    weight: 101
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }
