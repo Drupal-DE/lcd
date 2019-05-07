@@ -1,0 +1,177 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.solution.field_solution_benefits
+    - field.field.node.solution.field_solution_body
+    - field.field.node.solution.field_solution_case_studies
+    - field.field.node.solution.field_solution_features
+    - field.field.node.solution.field_solution_personas
+    - node.type.solution
+  module:
+    - layout_builder
+    - layout_discovery
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components:
+          fc4e4c6d-60d5-4355-bbff-f90a8ff41a97:
+            uuid: fc4e4c6d-60d5-4355-bbff-f90a8ff41a97
+            region: content
+            configuration:
+              id: 'field_block:node:solution:field_solution_personas'
+              label: Personas
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: entity_reference_entity_view
+                settings:
+                  view_mode: teaser
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 1
+          a0fe8af6-cb77-4f20-942f-eb50b4799d5d:
+            uuid: a0fe8af6-cb77-4f20-942f-eb50b4799d5d
+            region: content
+            configuration:
+              id: 'field_block:node:solution:field_solution_body'
+              label: Body
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: text_default
+                settings: {  }
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components:
+          f41fdb49-d994-476f-a9c2-df1154e1cdd6:
+            uuid: f41fdb49-d994-476f-a9c2-df1154e1cdd6
+            region: content
+            configuration:
+              id: 'field_block:node:solution:field_solution_case_studies'
+              label: 'Case Studies'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: entity_reference_entity_view
+                settings:
+                  view_mode: teaser
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components:
+          329e36f5-6fdc-44fb-a697-00c0f8e8a5e4:
+            uuid: 329e36f5-6fdc-44fb-a697-00c0f8e8a5e4
+            region: content
+            configuration:
+              id: 'field_block:node:solution:field_solution_benefits'
+              label: 'Features and Benefits'
+              provider: layout_builder
+              label_display: visible
+              formatter:
+                label: hidden
+                type: text_default
+                settings: {  }
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components:
+          1e78cc2b-7b63-49eb-abf2-72c78240f18e:
+            uuid: 1e78cc2b-7b63-49eb-abf2-72c78240f18e
+            region: content
+            configuration:
+              id: 'field_block:node:solution:field_solution_features'
+              label: Features
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: entity_reference_entity_view
+                settings:
+                  view_mode: teaser
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
+id: node.solution.default
+targetEntityType: node
+bundle: solution
+mode: default
+content:
+  field_solution_benefits:
+    weight: 104
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_solution_body:
+    weight: 101
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_solution_case_studies:
+    weight: 103
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_solution_features:
+    weight: 105
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_solution_personas:
+    weight: 102
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

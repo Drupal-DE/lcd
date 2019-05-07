@@ -1,0 +1,28 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_solution_case_studies
+    - node.type.case_study
+    - node.type.solution
+id: node.solution.field_solution_case_studies
+field_name: field_solution_case_studies
+entity_type: node
+bundle: solution
+label: 'Case Studies'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      case_study: case_study
+    sort:
+      field: title
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

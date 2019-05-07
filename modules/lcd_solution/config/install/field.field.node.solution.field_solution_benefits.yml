@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_solution_benefits
+    - node.type.solution
+  module:
+    - text
+id: node.solution.field_solution_benefits
+field_name: field_solution_benefits
+entity_type: node
+bundle: solution
+label: Benefits
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

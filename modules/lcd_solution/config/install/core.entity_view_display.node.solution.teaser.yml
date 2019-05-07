@@ -1,0 +1,29 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.solution.field_solution_benefits
+    - field.field.node.solution.field_solution_body
+    - field.field.node.solution.field_solution_case_studies
+    - field.field.node.solution.field_solution_features
+    - field.field.node.solution.field_solution_personas
+    - node.type.solution
+  module:
+    - user
+id: node.solution.teaser
+targetEntityType: node
+bundle: solution
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_solution_benefits: true
+  field_solution_body: true
+  field_solution_case_studies: true
+  field_solution_features: true
+  field_solution_personas: true
