@@ -1,0 +1,5 @@
+name: Feature
+type: module
+description: Provides feature functionality.
+package: lcd
+core: 8.x
