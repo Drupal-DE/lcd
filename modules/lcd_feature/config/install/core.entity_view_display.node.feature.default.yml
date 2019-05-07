@@ -24,15 +24,17 @@ third_party_settings:
             uuid: be608310-02bb-46aa-b24c-4a7c0e12edd2
             region: content
             configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
               id: 'field_block:node:feature:field_feature_body'
+              label: Body
+              provider: layout_builder
+              label_display: '0'
               formatter:
-                label: above
+                label: hidden
+                type: text_default
                 settings: {  }
                 third_party_settings: {  }
-                type: text_default
+              context_mapping:
+                entity: layout_builder.entity
             additional: {  }
             weight: 1
         third_party_settings: {  }
