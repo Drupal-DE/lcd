@@ -46,6 +46,9 @@ dependencies:
   - lcd_case_study
   - lcd_client
   - lcd_event
+  - lcd_feature
+  - lcd_persona
+  - lcd_solution
   - lcd_testimonial
   - lcd_user_group
 themes:
