@@ -43,6 +43,7 @@ dependencies:
   - layout_builder
   - lcd_agency
   - lcd_banner
+  - lcd_benefit
   - lcd_case_study
   - lcd_client
   - lcd_event
